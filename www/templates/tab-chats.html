@@ -1,0 +1,21 @@
+<ion-view view-title="Chats">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right"
+                ng-repeat="hymn in hymns"
+                type="item-text-wrap"
+                href="#/tab/hymns/{{hymns.hymnNumber}}">
+        <div class="row">
+          <div class="col col-10"><h2>{{hymn.hymnNumber}}</h2></div>
+          <div class="col col-75"><h2>{{hymn.title}}</h2></div>
+        </div>
+
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="remove(hymn)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

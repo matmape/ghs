@@ -1,0 +1,23 @@
+<ion-view view-title="Gospel Hymns & Songs">
+  <ion-content>
+    <label class="item item-input">
+      <input type="text" ng-model="search.$" placeholder="Search">
+    </label>
+    <ion-list>
+      <ion-item class="item-remove-animate  item-icon-right"
+                ng-repeat="hymn in hymns | filter:search"
+                type="item-text-wrap"
+                href="#/tab/hymns/{{hymn.hymnNumber}}"
+                >
+        <div class="row">
+          <div class="col col-10"><h2>{{hymn.hymnNumber}}</h2></div>
+          <div class="col col-90"><h2>{{hymn.title}}</h2></div>
+        </div>
+
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
